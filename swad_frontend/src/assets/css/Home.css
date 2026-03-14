@@ -1,0 +1,27 @@
+.hero-slider {
+  height: 100vh;
+  position: relative;
+}
+
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Dark overlay for readability */
+.hero-slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Make carousel above overlay */
+.carousel-inner {
+  position: relative;
+  z-index: 0;
+}

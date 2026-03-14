@@ -1,0 +1,174 @@
+.history-wrapper {
+  padding: 40px;
+  background: #f8f8f8;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.history-wrapper h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 80px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.history-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.history-card:hover {
+  transform: translateY(-5px);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.success-badge {
+  color: white;          /* 👈 this makes text white */
+}
+
+.pending-badge {
+  color: orange;
+}
+
+.failed-badge {
+  color: white;
+}
+
+.order-items {
+  margin-bottom: 10px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.order-total {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.no-orders {
+  text-align: center;
+  font-size: 18px;
+  color: gray;
+}
+/* Wrapper layout */
+.history-wrapper {
+  position: relative;
+  padding: 40px;
+  color: white;
+}
+
+/* Dark overlay over background image */
+.history-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);  /* dark glass overlay */
+  backdrop-filter: blur(5px);
+  z-index: 0;
+}
+
+/* Make content appear above overlay */
+.history-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* History Grid */
+.history-grid {
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+}
+
+/* Glass Card Effect */
+.history-card {
+  padding: 20px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+
+/* Hover lift effect */
+.history-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Header */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Items */
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+/* Total */
+.order-total {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Status Badges */
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.success-badge {
+  background: #28a745;
+}
+
+.pending-badge {
+  background: #ffc107;
+  color: black;
+}
+
+.failed-badge {
+  background: #dc3545;
+}
+
+.no-orders {
+  margin-top: 20px;
+  font-size: 18px;
+}
